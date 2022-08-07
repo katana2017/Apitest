@@ -1,0 +1,1968 @@
+{
+	"info": {
+		"_postman_id": "c0a5d71c-413a-4399-8807-2c9f663ef6da",
+		"name": "storm",
+		"description": "这是storm的接口测试用例集合",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8178407"
+	},
+	"item": [
+		{
+			"name": "storm-001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(200);",
+							"});",
+							"",
+							"/*pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{domain}}/getuser?userid=1",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "1"
+						}
+					]
+				},
+				"description": "请求方式get"
+			},
+			"response": []
+		},
+		{
+			"name": "storm-002",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"",
+							"/*pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{domain}}/getuser?userid=2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-003",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"*/",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-004",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{domain}}/getuser?userid=-1",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-005",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"*/",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{domain}}/getuser?userid=admin",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-006",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(200);",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-007",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-008",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-009",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-010",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"*/",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-011",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "100000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-012",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});*/",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(200);",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{domain}}/getuser2?userid=1",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser2"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-013",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*m.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{domain}}/getuser2?userid=1",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser2"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-014",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json123"
+					}
+				],
+				"url": {
+					"raw": "http://{{domain}}/getuser2?userid=1",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser2"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-015",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"*/",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{domain}}/getuser2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser2"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(500);",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://{{domain}}/getuser2?userid=2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser2"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-017",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(200);",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userid\" : 1\n}"
+				},
+				"url": {
+					"raw": "http://{{domain}}/getmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"参数错误\"",
+							"});",
+							"});",
+							"",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/getmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-019",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"没有这个用户\"",
+							"});",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userid\": \"2\"}"
+				},
+				"url": {
+					"raw": "http://{{domain}}/getmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-020",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"参数错误\"",
+							"});",
+							"});",
+							"",
+							"",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{domain}}/getmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-021",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"没有这个用户\"",
+							"});",
+							"});",
+							"/*",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userid\": \"admin\"}"
+				},
+				"url": {
+					"raw": "http://{{domain}}/getmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userid\": \"1\"}"
+				},
+				"url": {
+					"raw": "http://{{domain}}/getmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-023",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});*/",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 200,",
+							"    \"success\": \"成功\"",
+							"});",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-024",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"需要认证\"",
+							"});",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-025",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"认证失败\"",
+							"});",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234566",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-026",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"没有这个用户\"",
+							"});",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-027",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "900.9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-028",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "900",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-029",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({ code: 200, success: '成功' });",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=token12345"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-030",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"cookie认证失败\"",
+							"});",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=token12345",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-031",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"cookie非法\"",
+							"});",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=token1111"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-032",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body({",
+							"    \"code\": 500,",
+							"    \"msg\": \"没有这个用户\"",
+							"});",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=token12345"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-033",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=token12345"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "900.9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-034",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=token12345"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "900",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/setmoney2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storm-035",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body( { code: 200, success: '成功' });",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "上传文件接口，不适合postman自动化测试",
+							"type": "file",
+							"src": "/E:/TestFile/test.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{domain}}/uploadfile",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"uploadfile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
